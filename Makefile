@@ -7,6 +7,8 @@ FILES = primearray.o oldprime.o
 
 all: new old 
 
+clean:
+	rm -r prime_new prime_old $(FILES)
 	
 
 
