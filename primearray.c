@@ -1,7 +1,7 @@
 /*
 
 Created by Jake
-Edited and greatly improved by Thane
+Edited and greatly improved by Thane (LOLOLLOLOLOLOL)
 Date: 5/9/14
 
 */
@@ -28,7 +28,7 @@ int assertprimes(unsigned char array[], int size){
     for(p = 2; p < size; p++) {
         if (array[p] == 1) { // p is prime
             int i = p - 1; //current prime being checked minus 1
-            while(i > 1){ // loop backwards though primes checking for divisibility
+            while(i > 1){ // loop backwards though primes checking for divisibility --should change to 0, for speed improvements
                 if ((array[i] == 1) && ((p % i) == 0)){
                     fprintf(stderr, "%d is not a prime!\n", p);
                     i = 1; // already not prime, not worth checking anything else
@@ -63,13 +63,13 @@ int main(int argc, char **argv){
     while(i < max) {
         if(primearray[i] == 1) {
             int p = i;
-            int check = p*i;
+            int check = i+i;
             /* printf("%d\n",i); */
             while(check < arraysize) {
                 /* printf("%d\n", i); */
                 primearray[check] = 0; // set to not prime
                 p++;
-                check=p*i;
+                check+=i;
             }
         }
         i++;
@@ -81,9 +81,9 @@ int main(int argc, char **argv){
     /* }else fprintf(stderr, "%s\n", "a prime number was bad!"); */
 
 
-    /* printprimes(primearray, arraysize); */
+    //printprimes(primearray, arraysize);
 
-    /* assertprimes(primearray, arraysize); */
+    //assertprimes(primearray, arraysize);
 
     return 0;
 }
