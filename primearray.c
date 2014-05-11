@@ -16,6 +16,7 @@ void printprimes(unsigned char array[], unsigned long long int size){
     for(i=size; i > 0; i--){
         if(array[i] == 1){
             fprintf(stdout, "%llu%s", i, "\n" );
+            return;
         }
     }
 }
@@ -47,7 +48,7 @@ int main(int argc, char **argv){
         fprintf(stderr, "%s\n", "Usage is: primearray limit");
         return 1;
     }
-    unsigned long long int arraysize = atoi(argv[1]); // size of array
+    unsigned long long int arraysize = atoll(argv[1]); // size of array
     unsigned char primearray[arraysize]; // Allocate memory to array on the stack
 
 
