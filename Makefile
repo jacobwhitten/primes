@@ -1,6 +1,6 @@
 
 CC=gcc
-CFLAGS= -g -Wall
+CFLAGS= -g -Wall 
 
 FILES = primearray.o oldprime.o
 
@@ -10,7 +10,7 @@ clean:
 	rm -r prime_new prime_old $(FILES)
 
 new: primearray.o
-	gcc -g -Wall -o prime_new primearray.o -lm
+	gcc -g -Wall -m64 -o prime_new primearray.o -lm
 
 old: oldprime.o
 	gcc -g -Wall -o prime_old oldprime.o -lm
